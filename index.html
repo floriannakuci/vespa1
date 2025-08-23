@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>VESPA GTS PRIMAVERA SPRINT</title>
+<title>vespa show on the mountain</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <style>
-h1 {
-  font-size: 50px;
-  color: green;
-  text-align: center
-}
-
-p1 {
-  font-size: 30px;
-  color: blue;
-  Text-align: center;
-}
+.mySlides {display:none;}
 </style>
-</head>
 <body>
 
-<h1>New and Vintage Vespas<h1>
-<p1>Totally restored to new condition old classic vintage vespa and latest new model</p1>
-<img src="vespakuqe.jpg" alt="foto nuk hapet" width="662" height="524" class="center">
+<h2 class="w3-center">Vespa PX 200</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="vespakuqe.jpg" style="width:100%">
+  <img class="mySlides" src="vespakuqe2.jpg" style="width:100%">
+  <img class="mySlides" src="vespakuqe3.jpg" style="width:100%">
+  <img class="mySlides" src="vespakuqe4.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 </body>
 </html>
